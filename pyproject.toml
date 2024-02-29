@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "ons-python-template"
+name = "ons-python-template-demo"
 version = "0.1.0"
-description = "A Python starter template designed to jump start your next Python project"
+description = "A demo python project with tooling/configuration provided by ons-python-template"
 authors = ["ONSdigital"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-copier = "^9.1.1"
 
 [tool.poetry.group.dev.dependencies]
 # :TODO: Remove pylint when ruff supports all pylint rules
@@ -20,6 +19,7 @@ pytest-xdist = "^3.5.0"
 ruff = "^0.2.1"
 pytest-cov = "^4.1.0"
 mypy = "^1.7.0"
+copier = "^9.1.1"
 
 [build-system]
 requires = ["poetry-core"]

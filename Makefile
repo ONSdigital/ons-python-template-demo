@@ -7,13 +7,32 @@ all: ## Show the available make targets.
 	@echo "Targets:"
 	@fgrep "##" Makefile | fgrep -v fgrep
 
+.PHONY: clean
+clean: ## Clean the temporary files.
+	rm -rf .pytest_cache
+	rm -rf .mypy_cache
+	rm -rf .coverage
+	rm -rf .ruff_cache
+	rm -rf megalinter-reports
+
+.PHONY: format
+format:  ## Format the code.
+	poetry run black .
+	poetry run ruff check . --fix
+
 .PHONY: lint
-lint:  ## Run Python linter
-	echo "Not implemented yet"
+lint:  ## Run all linters (black/ruff/pylint/mypy).
+	poetry run black --check .
+	poetry run ruff check .
+	make mypy
 
 .PHONY: test
-test:  ## Run the tests
-	echo "Not implemented yet"
+test:  ## Run the tests and check coverage.
+	poetry run pytest -n auto --cov=ons_python_template_demo --cov-report term-missing --cov-fail-under=100
+
+.PHONY: mypy
+mypy:  ## Run mypy.
+	poetry run mypy ons_python_template_demo
 
 .PHONY: install
 install:  ## Install the dependencies excluding dev.
@@ -30,6 +49,6 @@ megalint:  ## Run the mega-linter.
 		-v $(shell pwd):/tmp/lint:rw \
 		oxsecurity/megalinter:v7
 
-.PHONY: clean
-clean: ## Clean the temporary files.
-	rm -rf megalinter-reports
+.PHONY: copier-update
+copier-update:  ## Update the project using the initial copier template.
+	poetry run copier update

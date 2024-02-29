@@ -1,0 +1,13 @@
+# Changes here will be overwritten by Copier
+# Do not modify this file directly
+# To update the project using the original template, run make copier-update
+_src_path: /home/runner/work/ons-python-template-demo/ons-python-template-demo
+dependabot_open_pull_requests_limit: 10
+enable_copier_updates: true
+enable_dependabot_version_updates: true
+module_name: ons_python_template_demo
+repository_description: A demo python project with tooling/configuration provided
+    by ons-python-template
+repository_name: ons-python-template-demo
+repository_owner: ONSdigital
+repository_visibility: public
