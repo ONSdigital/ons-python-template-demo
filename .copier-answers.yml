@@ -9,7 +9,7 @@ enable_dependabot_version_updates: true
 module_name: app
 package_manager: poetry
 repo_settings: recommended
-repository_description: A demo repository created using https://github.com/ONSdigital/ons-python-template
+repository_description: A demo python repository created using the [ONS Python Template](https://github.com/ONSdigital/ons-python-template)
 repository_name: ons-python-template-demo
 repository_owner: ONSdigital
 repository_visibility: public

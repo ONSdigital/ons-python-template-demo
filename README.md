@@ -10,7 +10,7 @@
 [![poetry-managed](https://img.shields.io/badge/poetry-managed-blue)](https://python-poetry.org/)
 [![License - MIT](https://img.shields.io/badge/licence%20-MIT-1ac403.svg)](https://github.com/ONSdigital/ons-python-template-demo/blob/main/LICENSE)
 
-A demo repository created using https://github.com/ONSdigital/ons-python-template
+A demo python repository created using the [ONS Python Template](https://github.com/ONSdigital/ons-python-template)
 
 ---
 
