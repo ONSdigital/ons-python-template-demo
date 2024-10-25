@@ -34,8 +34,8 @@ env:
   # Show individual linter status in GitHub Actions status summary
   GITHUB_STATUS_REPORTER: true
 
-  # Enable to show lint results in GitHub PR comments.
-  GITHUB_COMMENT_REPORTER: true
+  # Enable to show lint results in GitHub PR comments. Disabled as it can be noisy.
+  GITHUB_COMMENT_REPORTER: false
 
   # Set to simple to avoid external images in generated markdown
   REPORTERS_MARKDOWN_TYPE: simple
